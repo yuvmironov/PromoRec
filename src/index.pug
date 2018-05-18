@@ -1,0 +1,58 @@
+head
+	meta(charset="UTF-8")
+	title Рециркуляторы тм "Армед"
+	link(rel="stylesheet" type="text/css" href="Preload.css")
+	
+body
+	.Preload
+		h1 Загрузка
+	.IndexPages
+		a.IndexPages-Back(href="#")
+			img(src="images/IndexBack.png")
+		.IndexPages-Social
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/vk.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/tv.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/tv.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/you.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/fac.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/pt.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/goo.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/in.png" alt="Кнопка социальной сети")
+			a.Social-Link(href="#")
+				img.Social-Images(src="images/Social/pin.png" alt="Кнопка социальной сети")
+		img.IndexPages-Logo(src='images/IndexLogo.png')
+		h1.IndexPages-Header Кислородные концентраторы
+		nav.IndexPages-Menu
+			a.IndexPages-NavLink.IndexPages-NavLink_Active(href="Profilactica.html" data-id="Prof") Для профилактики
+			a.IndexPages-NavLink.IndexPages-NavLink_NotActive(href="Universal.html" data-id="Uni") Универсальные
+			a.IndexPages-NavLink.IndexPages-NavLink_NotActive(href="Lechenie.html" data-id="Lech") Для лечения
+		
+		.IndexPages-Info#Prof.IndexPages-Info_Show
+			img.IndexPages-Image(src='images/IndexRec1.png')
+			ul.IndexPages-List.List
+				li.IndexPages-ListItem.List-Item#ListItem1 Вкусные и полезные кислородные коктейли
+				li.IndexPages-ListItem.List-Item#ListItem2 Современный способ поддержки здоровья
+				li.IndexPages-ListItem.List-Item#ListItem3 Стильный дизайн и компактные размеры
+		.IndexPages-Info#Uni.IndexPages-Info_Hide
+			img.IndexPages-Image(src='images/IndexRec2.png')
+			ul.IndexPages-List.List
+				li.IndexPages-ListItem.List-Item#ListItem4 Поддержка здоровья и помощь в лечении на ранних стадиях
+				li.IndexPages-ListItem.List-Item#ListItem5 Приготовление кислородных коктейлей в большом количестве
+				li.IndexPages-ListItem.List-Item#ListItem6 Популярность как в фитнес-клубах, так и в домашнем использовании
+		.IndexPages-Info#Lech.IndexPages-Info_Hide
+			img.IndexPages-Image(src='images/IndexRec3.png')
+			ul.IndexPages-List.List
+				li.IndexPages-ListItem.List-Item#ListItem7 Облегчение лечения заболеваний дыхательных путей и сердца
+				li.IndexPages-ListItem.List-Item#ListItem8 Источник кислородно-воздушной смеси в больших объемах
+				li.IndexPages-ListItem.List-Item#ListItem9 Популярность в мед. учреждениях и для лечения дома
+	
+	link(rel="stylesheet" type="text/css" href="main.css")
+	script(src='main.js')

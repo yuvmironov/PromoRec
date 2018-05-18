@@ -1,0 +1,16 @@
+.List
+	font-family: Roboto;
+	line-height: 32px;
+	font-size: 18px;
+	color: #4F4F4F;
+	list-style none
+	&-Item
+		display none
+	&-Item_Active
+		animation ListItemActive 1s linear 2s forwards
+		
+@keyframes ListItemActive
+	from 
+		opacity 0
+	to 
+		opacity 1
