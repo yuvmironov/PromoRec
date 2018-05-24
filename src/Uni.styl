@@ -43,45 +43,50 @@
 		align-items center
 		justify-content center
 		
-	&-Header
-		text-align center
-		font-family: Rubik;
-		font-weight: 500;
-		font-size: 30px;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-		color: #99BCDC;
-		padding 33px 97px
-		border 6px solid #B8DCFD
-		width: 30%;
-		margin: 0 auto 36px auto;
-		
-	&-SubHead
-		font-family: Rubik;
-		font-weight: 500;
-		line-height: 36px;
-		font-size: 28px;
-		text-align: center;
-		letter-spacing: 0.05em;
-		color: #8CB2D5;
-		text-align center
-		position relative
-		margin-bottom 40px
-		&:after
-			content ''
-			position absolute
-			width 160px
-			bottom -20px
-			left calc(50% - 80px)
-			height 2px
-			background-color #CDDFF3
 	&-Text
+		display block
+		margin 0 auto
+		position relative
+		top 28px
+		width 80%
+	&-All
+		display block
+		margin 0 auto
+		position relative
+		top: -75px;
+		width 30%
+	&-Header
+		display inline-block
+		width auto
+		border-style: solid;
+		border-width: 6px;
+		border-image: url('images/Uni/UniBorder.png') 6 fill repeat;
+		padding 26px 40px
+		position: relative;
+		top: -100px;
+	&-HeaderText
+		font-family: Rubik;
+		font-weight: 500;
+		font-size: 28px;
+		letter-spacing: 0.1em;
+		color: #8CB2D5;
+	&-Description
+		position relative
+		top -80px
+	&-Desc
 		font-family: Roboto;
 		line-height: 21px;
 		font-size: 16px;
 		text-align: center;
 		color: #7599BA;
-		width: 931px;
+		max-width 1130px
 		margin 0 auto
 		&:not(:last-child)
-			margin-bottom 20px
+			margin-bottom 25px
+	&-MainLink
+		color #EECFC2
+		&:hover
+			color #C5AA9F
+		&_Active
+			border-bottom-color #C5AA9F
+			color #C5AA9F

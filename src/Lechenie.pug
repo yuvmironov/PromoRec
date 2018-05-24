@@ -1,9 +1,59 @@
 head
 	meta(charset="UTF-8")
 	title Рециркуляторы для лечения
-	link(rel="stylesheet" type="text/css" href="main.css")
-	
+	link(rel="stylesheet" type="text/css" href="Preload.css")
+
 	
 	body
-		.Lechenie Лечение
+		.Preload
+			h1 Загрузка
+
+		nav.MainMenu
+			a.MainMenu-Link.MainMenu-Link_NotActive.Lechenie-MainLink.Lechenie-MainLink_NotActive(href="Profilactica.html" data-id="Prof") Для профилактики
+			a.MainMenu-Link.MainMenu-Link_NotActive.Lechenie-MainLink.Lechenie-MainLink_NotActive(href="Universal.html" data-id="Uni") Универсальные
+			a.MainMenu-Link.MainMenu-Link_Active.Lechenie-MainLink.Lechenie-MainLink_Active(href="Lechenie.html" data-id="Lech") Для лечения
+			
+		.IndexPages-Social
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/vk.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/tv.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/tv.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/you.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/fac.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/pt.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/goo.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/in.png" alt="Кнопка социальной сети")
+			a.Social-Link.Univarsalnie-SocialLink(href="#")
+				img.Social-Images(src="images/Social/pin.png" alt="Кнопка социальной сети")
+
+		.Lechenie#LechFullPage
+			.section.Lechenie_One
+				//img.Lechenie-Text(src="images/Lech/LechBorder.png")
+				//img.Lechenie-All(src="images/Lech/LechAll.png")
+				.Lechenie-Header
+					h3.Lechenie-HeaderText Облегчение болезней сердца и дыхательных путей
+				.Lechenie-Description
+					p.Lechenie-Desc 
+						|Для тех случаев, когда от запаса кислорода зависит жизнь и самочувствие Ваших близких, и когда каждый вдох бесценен, предусмотрены мощные профессиональные модели концентраторов с производительностью более 5 л/мин.
+					p.Lechenie-Desc 
+						|Кислородно-воздушная смесь в таких объемах может быть полезна для облегчения процесса лечения гипоксии, рака легких, туберкулеза, ХОБЛ и др. Чаще такие концентраторы применяются в больницах, но могут также использоваться и в домашних условиях
+
+			.section.Lechenie_Two
+			.section.Lechenie_Three
+			.section.Lechenie_Four
+			.section.Lechenie_Five
+			.section.Lechenie_Six
+			.section.Lechenie_Seven
+
+		
 		script(src='main.js')
+		link(rel="stylesheet" type="text/css" href="index.css")
+		link(rel="stylesheet" type="text/css" href="Lech.css")
+

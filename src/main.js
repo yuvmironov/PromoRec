@@ -1,3 +1,102 @@
+$('#PrincipSlider').slick({
+	infinite: true,
+	variableWidth: true,
+	//adaptiveHeight: true,
+	autoplay: true,
+	autoplaySpeed: 2000,
+	arrows: false
+	//fade: true,
+});
+
+$('#ProfFullPage').fullpage({
+	navigation: true,
+	navigationTooltips: ['Описание', 'Принцип работы','Название 1','Название 2','Название 3','Сопутствующие товары', 'Где купить'],
+	showActiveTooltip: true,
+	slideSelector: ".FullSlide",
+	slidesNavigation: true,
+	slidesNavPosition: 'bottom',
+	//fixedElements: '.FullSlide-Header',
+	afterLoad: function (anchorLink, index) {
+		var loadedSection = $(this);
+		switch (index) {
+			case 1:
+				var navDots = $('#fp-nav').children().children().children().children();
+				var navTooltipe = $('#fp-nav').children().children().children().next();
+				var menuLinkNotActive = $('.MainMenu-Link_NotActive');
+				var menuLinkActive = $('.MainMenu-Link_Active');
+				var menuLink = $('.MainMenu-Link');
+				var social = $('.Social-Link');
+				var dotsPalka = $('#fp-nav').children().children();
+				
+				navTooltipe.css({"background": "rgba(255, 251, 249, 0.7)", "color": "#AB988F"}); 
+				navDots.css('background', '#E4CFC7');
+				for (var i = 0; i < navDots.length; i++) {
+					if ($(navDots[i]).parent().hasClass('active')) {
+						$(navDots[i]).css('background', '#BDA69E');
+					}
+				}
+				menuLinkNotActive.css({"color": "#EECFC2"});
+				menuLinkActive.css({'color': '#C5AA9F', 'border-bottom': '2px solid #C5AA9F'});
+				menuLink.removeClass('Profilactica-MainLink_Two').addClass('Profilactica-MainLink_One')
+				social.removeClass('Social-Link_ProfTwo').addClass('Social-Link_ProfOne');
+				dotsPalka.removeClass('fp_ProfTwo').addClass('fp_ProfOne');
+				
+				break;
+			}
+	}
+	/*afterSlideLoad(anchorLink, index, slideAnchor, slideIndex) {
+		switch (slideIndex) {
+			case 0:
+				$.fn.fullpage.moveTo(2, 1);
+				break;
+			case 1:
+				$.fn.fullpage.moveTo(2, 2);
+				break;
+			case 2:
+				$.fn.fullpage.moveTo(2, 0);
+				break;
+		}
+
+		console.log("slideIndex", slideIndex);
+		console.log("slideAnchor", slideAnchor);
+		console.log("index", index);
+		console.log("anchorLink", anchorLink);
+	}*/
+});
+
+$('#LechFullPage').fullpage({
+	navigation: true,
+	navigationTooltips: ['Описание', 'Принцип работы','Название 1','Название 2','Название 3','Сопутствующие товары', 'Где купить'],
+	showActiveTooltip: true,
+	afterLoad: function (anchorLink, index) {
+		var loadedSection = $(this);
+		switch (index) {
+			case 1:
+				var navDots = $('#fp-nav').children().children().children().children();
+				var navTooltipe = $('#fp-nav').children().children().children().next();
+				var menuLinkNotActive = $('.MainMenu-Link_NotActive');
+				var menuLinkActive = $('.MainMenu-Link_Active');
+				var menuLink = $('.MainMenu-Link');
+				var social = $('.Social-Link');
+				var dotsPalka = $('#fp-nav').children().children();
+				
+				navTooltipe.css({"background": "rgba(249, 240, 240, 0.7)", "color": "#DA9393"}); 
+				navDots.css('background', '#E8ABAB');
+				for (var i = 0; i < navDots.length; i++) {
+					if ($(navDots[i]).parent().hasClass('active')) {
+						$(navDots[i]).css('background', '#CA8282');
+					}
+				}
+				menuLinkNotActive.css({"color": "#EECACA"});
+				menuLinkActive.css({'color': '#E68E8E', 'border-bottom': '2px solid #ED9F9F'});
+				menuLink.removeClass('Lechenie-MainLink_Two').addClass('Lechenie-MainLink_One')
+				social.removeClass('Social-Link_LechTwo').addClass('Social-Link_LechOne');
+				dotsPalka.removeClass('fp_LechTwo').addClass('fp_LechOne');
+				
+				break;
+			}
+	}
+});
 
 $('#UniFullPage').fullpage({
 	navigation: true,
@@ -19,7 +118,7 @@ $('#UniFullPage').fullpage({
 				navDots.css('background', '#C9DAEF');
 				for (var i = 0; i < navDots.length; i++) {
 					if ($(navDots[i]).parent().hasClass('active')) {
-						$(navDots[i]).css('background', '#000');
+						$(navDots[i]).css('background', '#86A4C9');
 					}
 				}
 				menuLinkNotActive.css({"color": "#aec4df"});
@@ -74,9 +173,6 @@ $('#UniFullPage').fullpage({
 });
 
 
-
-
-
 window.onload = function () {
 	console.log('Загрузились');
 	$('.Preload').addClass('Preload-Hide');
@@ -110,6 +206,4 @@ window.onload = function () {
 			document.getElementById(thisId).classList.replace('IndexPages-Info_Hide', 'IndexPages-Info_Show');
 		})
 	}
-
-
 };
