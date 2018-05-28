@@ -1,0 +1,88 @@
+.Contacts
+	display: flex
+	align-items: flex-start
+	&-Share
+		margin-left: 5px
+	&-Map, &-Info
+		height: 725px
+	&-Map
+		background-color: deeppink
+		width: 50%
+	&-Menu, &-Submenu
+		list-style: none
+	&-Submenu
+		height: 700px
+	&-MenuWrap
+		width: 50%
+		height: 725px
+	&-Info
+		width: 40%
+		background-color: mediumspringgreen
+	&-TabsLinks
+		margin-bottom: 10px
+		align-items: center;
+		background-color: #fbfbfb;
+		padding: 20px 10px;
+	&-HeadLink
+		font-family: 'Rubik'
+		font-size: 18px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: #828282
+		&_Active
+			color: #333
+			border-bottom: 2px solid #d64b4b
+	&-ElementHead
+		font-family: 'Roboto'
+		font-size: 18px
+		text-decoration-line: underline
+		color: #d64b4b
+		margin-bottom: 10px
+	&-Address
+		font-family: 'Roboto'
+		font-size: 16px
+		width: 100%
+		color: #4F4F4F
+		line-height: 1
+		margin-bottom: 2%
+	&-OrganizationInfo
+		display: none
+		flex-direction: column
+		margin-top: 30px
+	&-InfoPhone
+		margin-right: 20px
+	&-Name
+		font-size: 11px
+		color: #BDBDBD
+	&-Item
+		font-size: 11px
+		color: #4F4F4F
+	&-Element
+		padding: 2% 0
+		&:nth-child(2n+1)
+			background-color: white
+	&-TabsBlocks
+		height: 600px
+	&-Data
+		display: flex
+	&-Coordinate
+		font-size: 11px
+		margin-bottom: 15px
+		color: #BDBDBD
+	&-Header
+		padding: 0 3%
+.Accordion-Title_Active
+	.Contacts-ElementHead
+		text-decoration: none
+		margin-bottom: 10px
+		font-size: 20px
+.Balloon
+	&-Footer
+		display: flex
+		justify-content: space-around
+.Dep-Content
+	p, a
+		font-size: 14px
+		line-height: 21px
+		color: #4f4f4f
+		font-family: Roboto

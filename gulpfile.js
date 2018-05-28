@@ -11,7 +11,7 @@ gulp.task('styl', function () {
 				title  : "Stylus Error!"
 			  } ) )
 		  )
-		.pipe(lp.csso({restructure: true}))
+		.pipe(lp.csso({restructure: false}))
 		.pipe(lp.sourcemaps.write('maps'))	
 		.pipe(gulp.dest('relise'))
 });
@@ -38,8 +38,10 @@ gulp.task('pug', function () {
 
 gulp.task('js', function () {
 	return gulp.src(['libs/jquery/dist/jquery.js',
+					'libs/fullpage.js/vendors/scrolloverflow.js',
 					 'libs/fullpage.js/dist/jquery.fullpage.js',
 					 'libs/slick-carousel/slick/slick.js',
+					 'src/map.js',
 					 'src/main.js'])
 		.pipe(lp.sourcemaps.init())
 		.pipe(lp.concat('main.js'))
@@ -53,7 +55,7 @@ gulp.task('img', function () {
 });
 
 gulp.task('default', ['styl', 'pug', 'js', 'img'], function () {
-	gulp.watch('src/**/*.styl', ['styl']);
+	gulp.watch( ['src/**/*.styl' , 'libs/fullpage.js/dist/jquery.fullpage.styl'], ['styl']);
 	gulp.watch('src/**/*.pug', ['pug']);
 	gulp.watch('src/**/*.js', ['js']);
 	gulp.watch('src/images/**/*.*.', ['img']);

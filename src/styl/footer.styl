@@ -1,0 +1,85 @@
+.footer
+	max-width: 100%
+	color: red
+	background-color: rgba(255, 255, 255, 1)
+	&__head
+		color: red
+		font-family: red
+		font-size: 1.8em
+		font-weight: 500
+		border-left: 3px solid #d64b4b
+		padding-left: 10px
+		margin-bottom: 19px
+		letter-spacing: 0.1em
+	&__wrapp
+		max-width: red
+		margin: 0 auto
+		padding: 31px 15px
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 1px
+			bottom: 0
+			background-image: linear-gradient(to right, rgba(224,224,224,0) 0%, rgba(224,224,224,1) 50%, rgba(224,224,224,0) 100%)
+	&__logo
+		&-link
+			margin-bottom: 15px
+		&-image
+			position: relative
+			bottom: 20px
+	&__contacts, &__menu, &__info
+		list-style: none
+		display: flex
+		flex-direction: column
+	&__contacts
+		width: 350px
+		&-item
+			display: flex
+			flex-wrap: wrap
+			align-items: flex-start
+			&:not(:last-child)
+				margin-bottom: 15px
+		&-text
+			width: 90%
+			font-size: 1.4em
+	  	&-wrap
+			width: 90%
+		&-image
+			display: block
+			width: 16px
+			height: 16px
+			background-image: url('images/sprite.png')
+			margin-right: 10px
+			margin-top: 1px
+		&-map 
+			background-position: -86px -120px
+		&-email
+			background-position: -54px -120px
+		&-phone
+			background-position: -70px -120px
+		&-link
+			color: red
+			text-decoration: none
+			&:hover
+				color: red
+	&__menu, &__info
+		width: 267px
+		&-item
+			&:not(:last-child)
+				margin-bottom: 13px
+		&-link
+			font-size: 1.4em
+			color: red
+			text-decoration: none
+			transition: all .3s ease
+			&:hover
+				color: red
+				padding-left: 5px
+	&__info
+		width: 220px

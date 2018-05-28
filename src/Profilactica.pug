@@ -2,8 +2,6 @@ head
 	meta(charset="UTF-8")
 	title Рециркуляторы для профилактики
 	link(rel="stylesheet" type="text/css" href="Preload.css")
-
-	
 	body
 		.Preload
 			h1 Загрузка
@@ -34,18 +32,17 @@ head
 				img.Social-Images(src="images/Social/pin.png" alt="Кнопка социальной сети")
 
 		.Profilactica#ProfFullPage
-			.section.Profilactica_One
-				img.Profilactica-Text(src="images/Prof/Profilactica_Text.svg")
-				img.Profilactica-All(src="images/Prof/Profilactica_All.png")
-				.Profilactica-Header
+			.section.Profilactica_One.fp-noscroll
+				//- img.Profilactica-Text(src="images/Prof/Profilactica_Text.svg")
+				//- img.Profilactica-All(src="images/Prof/Profilactica_All.png")
+				.Profilactica-Header.Profilactica_One-Header
 					h3.Profilactica-HeaderText Вдохните полной грудью в самом сердце мегаполиса
 				.Profilactica-Description
-					p.Profilactica-Desc 
+					p.Profilactica-Desc.Profilactica_One-Desc
 						|Когда пыль и смог заставляют задыхаться в будничной городской суете, а на прогулки на свежем воздухе не хватает времени – на помощь придет функциональный и стильный концентратор кислорода.
-					p.Profilactica-Desc 
+					p.Profilactica-Desc.Profilactica_One-Desc
 						|Компактные модели для дома производят до 1 л кислородно-воздушной смеси в минуту. За счет стильного дизайна устройство идеально впишется в интерьер и станет незаменимым источником кислорода в Вашем доме.
-
-			.section.Profilactica_Two
+			.section.Profilactica_Two.fp-noscroll
 				.FullSlide
 					.FullSlide-Header
 						h3.FullSlide-HeaderText Как работает кислородный концентратор? 
@@ -72,13 +69,126 @@ head
 					img.FullSlide-Image(src="images/Princip/PrincipThree.svg")
 					p.FullSlide-Text Далее процесс зеркально дублируется: 
 					p.FullSlide-Text В цеолитовую колонку №2 поступает воздух, откуда очищенная кислородно-воздушная смесь попадает через увлажнитель к пользователю, а часть кислорода и другие газы оказываются в колонке №1 и также выходят через соответствующий клапан.
-			.section.Profilactica_Three
-			.section.Profilactica_Four
-			.section.Profilactica_Five
-			.section.Profilactica_Six
-			.section.Profilactica_Seven
+			.section.Profilactica_Three.fp-noscroll
+				.Profilactica_Three-Content
+					h2.Profilactica_Three-ProductHead.PromoProduct-Header Кислородный концентратор&nbsp;
+						span.Profilactica_Three-ProductModel.PromoProduct-Model 8Ф-1/1
+					p.Profilactica_Three-ProductText.PromoProduct-Text
+						| Полезный источник кислородно-воздушной смеси в домашних условиях, выполнен в стильном и современном дизайне. Данный концентратор создан для людей, которые заботятся о здоровье близких и трепетно относятся к вопросам эстетичности.
+					p.Profilactica_Three-ProductText.PromoProduct-Text
+						|Армед 8Ф-1/1 займет особое место в сердцах потребителей и станет украшением любого современного интерьера. Несмотря на компактные размеры, концентратор выделяется богатыми функциональными возможностями и продуманной системой управления.
+					a.ButtonWhere(href='#') Где купить?
+			.section.Profilactica_Four.fp-noscroll
+				.Profilactica_Four-Content
+					h2.Profilactica_Four-ProductHead.PromoProduct-Header Кислородный концентратор&nbsp;
+						span.Profilactica_Four-ProductModel.PromoProduct-Model 8Ф-1/2 
+					p.Profilactica_Four-ProductText.PromoProduct-Text
+						| Модификация популярного кислородного концентратора Армед в элегантной расцветке под дерево (бук). Сочетает в себе строгие геометрические формы и классические цветовые решения. Выполнен в лучших традициях минимализма
+					p.Profilactica_Four-ProductText.PromoProduct-Text
+						|При лаконичном дизайне и компактных размерах, модель оснащена удобным пультом управления и широким перечнем технических возможностей. Идеально подходит для комфортного проведения сеансов кислородотерапии в домашних условиях
+					a.ButtonWhere(href='#') Где купить?
+			.section.Profilactica_Five.fp-noscroll
+				.Profilactica_Five-Content
+					h2.Profilactica_Five-ProductHead.PromoProduct-Header Кислородный концентратор&nbsp;
+						span.Profilactica_Five-ProductModel.PromoProduct-Model 7F-1L
+					p.Profilactica_Five-ProductText.PromoProduct-Text
+						| Будучи одним из первых концентраторов в истории компании, Армед 7F-1L успел пройти проверку временем и стать неоднократным лидером продаж на рынке кислородного оборудования.
+					p.Profilactica_Five-ProductText.PromoProduct-Text
+						|При производительности 1 л/мин., устройство отлично подходит для профилактических целей. Его классический дизайн подсознательно вызывает доверие и придется по вкусу тем пользователям, для кого функционал и надежность важнее современных тенденций.
+					a.ButtonWhere(href='#') Где купить?
+			.section.Profilactica_Six.fp-noscroll
+				.Profilactica_Six-Content
+					h2.Profilactica_Six-ProductHead.PromoProduct-Header Пульсоксиметры&nbsp;
+						span.Profilactica_Six-ProductModel.PromoProduct-Model Армед
+					p.Profilactica_Six-ProductText.PromoProduct-Text
+						| Компактные пульсоксиметры помогают своевременно и оперативно определить важнейшие показатели здоровья: уровень насыщенности крови кислородом и частоту пульса. Именно с помощью пульсоксиметра можно узнать, когда организм нуждается в дополнительном источнике кислорода.
+					p.Profilactica_Six-ProductText.PromoProduct-Text
+						|Мы предлагаем широкий ассортимент компактных и стильных пульсоксиметров с богатым функционалом. Устройство легко помещается в кармане и управляется всего одной кнопкой!
+					a.ButtonWhere(href='#') Где купить?
+			.section.Profilactica_Seven.fp-noscroll
+				.Profilactica_Seven-Content
+					h2.Profilactica_Seven-ProductHead.PromoProduct-Header Коктейлеры&nbsp;
+						span.Profilactica_Seven-ProductModel.PromoProduct-Model Армед
+					p.Profilactica_Seven-ProductText.PromoProduct-Text
+						| Для приготовления вкусных и полезных кислородных коктейлей недостаточно одного концентратора. В нашем ассортименте представлен перечень функциональных и стильных коктейлеров различного типа.
+					p.Profilactica_Seven-ProductText.PromoProduct-Text
+						|Компактные и доступные коктейлеры для всей семьи, модели с ярким дизайном для детей и взрослых, а также вместительные коктейлеры для массового производства кислородных коктейлей.
+					a.ButtonWhere(href='#') Где купить?
+			.section.Profilactica_Eight.fp-noscroll
+				.Profilactica_Eight-Content
+					h2.Profilactica_Eight-ProductHead.PromoProduct-Header Смеси для приготовления коктейлей&nbsp;
+						span.Profilactica_Eight-ProductModel.PromoProduct-Model 
+					p.Profilactica_Eight-ProductText.PromoProduct-Text
+						| Главной частью вкусного и полезного кислородного коктейля является воздушно-легкая пена, которая невозможна без использования специальной смеси.
+					p.Profilactica_Eight-ProductText.PromoProduct-Text
+						|Наши смеси для приготовления коктейлей изготовлены из натуральных ингредиентов и не содержат вредных для организма добавок. На выбор представлены как стандартные смеси (на основе яичного белка), так и специальные гипоаллергенные варианты.
+					a.ButtonWhere(href='#') Где купить?
+			.section.Profilactica_Nine#MapSection
+				.Profilactica_Nine-Content
+					h2.Profilactica_Nine-ProductHead.PromoProduct-Header Где можно купить концентратор кислорода&nbsp;
+						span.Profilactica_Nine-ProductModel.PromoProduct-Model “Армед”
+					.Contacts
+						.Contacts-Map#ContactsMap
+						.Contacts-MenuWrapp
+					a#BackToTheBeginning(href='#ProfFullPage' data-text="В начало")
+					footer.footer
+						.footer__wrapp
+							.footer__contacts
+								a.footer__logo-link(href="error.html")
+									img.footer__logo-image(src="images/Global/logo.png" alt="логотип космпании Армед")
+								.footer__contacts-item
+									i.footer__contacts-image-map.footer__contacts-image
+									p.footer__contacts-text
+										|Адрес: Московская обл., г. Балашиха, Западная Коммунальная
+										|Зона, ш. Энтузиастов, влад. 1А
+								.footer__contacts-item
+									i.footer__contacts-image-phone.footer__contacts-image
+									.footer__contacts-text-wrap
+										p.footer__contacts-text
+											span.footer__contacts-city Москва:&nbsp
+											a.footer__contacts-link(href="tel:+74959891288") +7 (495) 989-12-88
+										p.footer__contacts-text
+											span.footer__contacts-city Санкт-Петербург:&nbsp
+											a.footer__contacts-link(href="tel:+78127027302") +7 (812) 702-73-02
+										p.footer__contacts-text
+											span.footer__contacts-city Екатеринбург:&nbsp
+											a.footer__contacts-link(href="tel:+73432864273") +7 (343) 286-42-73
+								.footer__contacts-item
+									i.footer__contacts-image-email.footer__contacts-image
+									p.footer__contacts-text
+										a.footer__contacts-link(href="mailto:armed@armed.ru") armed@armed.ru
 
-		
+							menu.footer__menu
+								h2.footer__head Меню
+								li.footer__menu-item
+									a.footer__menu-link(href="index.html") Главная
+								li.footer__menu-item
+									a.footer__menu-link(href="error.html") Магазины
+								li.footer__menu-item
+									a.footer__menu-link(href="error.html") Информация
+								li.footer__menu-item
+									a.footer__menu-link(href="error.html") Оптовикам
+								li.footer__menu-item
+									a.footer__menu-link(href="catalog_ur.html") Каталог
+								li.footer__menu-item
+									a.footer__menu-link(href="error.html") Карта сайта
+
+							menu.footer__info
+								h2.footer__head Общая информация
+								li.footer__info-item
+									a.footer__info-link(href="error.html") История Armed
+								li.footer__info-item
+									a.footer__info-link(href="error.html") Свяжитесь с нами
+								li.footer__info-item
+									a.footer__info-link(href="error.html") Политика конфидециальности
+								li.footer__info-item
+									a.footer__info-link(href="error.html") Политика cookie
+								li.footer__info-item
+									a.footer__info-link(href="error.html") Условия и положения
+								li.footer__info-item
+									a.footer__info-link(href="error.html") Катра сайта
+							
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" charset="utf-8")
 		script(src='main.js')
 		link(rel="stylesheet" type="text/css" href="index.css")
 		link(rel="stylesheet" type="text/css" href="Profi.css")

@@ -1,60 +1,109 @@
 .Univarsalnie
-	background-color chocolate
 	width 100vw
 	height 100vh
-	&-One
-		background-image url('images/UniBg.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
-		display flex
-		align-items center
-		justify-content center
-	&-Two
+	&_One
+		background-image  url('images/Uni/UniAll.png'), url('images/Uni/UniText.svg'), url('images/Uni/UniBg.png')
+		background-position center 130px,center 90px,center bottom
+		background-size 25%, 40%,  cover
+		background-repeat no-repeat, no-repeat, no-repeat
+		&-Header
+			margin-top 700px
+	&_Two
 		background-image url('images/Princip.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
-		display flex
-		align-items center
-		justify-content center
-	&-Three
-		background-image url('images/Uni8f1.png')
+	&_Three
+		background-image url('images/Uni/UniThree.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
-		display flex
-		align-items center
-		justify-content center
-	&-Thour
-		background-image url('images/Uni7f3l.png')
+		&-Content
+			width 491px
+			position absolute
+			top 300px
+			left 200px
+		&-ProductHead
+			color: #446B7C
+		&-ProductModel
+			color: #D64B4B
+		&-ProductText
+			color: #8FABC1
+	&_Four
+		background-image url('images/Uni/UniFor.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
-		display flex
-		align-items center
-		justify-content center
-	&-Five
-		background-image url('images/Uni7f5l.png')
+		&-Content
+			width 491px
+			position absolute
+			top 300px
+			left 200px
+		&-ProductHead
+			color: #91717C
+		&-ProductModel
+			color: #D64B4B
+		&-ProductText
+			color: #AC8A96
+	&_Five
+		background-image url('images/Prof/Profilactica_SixBg.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
-		display flex
-		align-items center
-		justify-content center
-		
-	&-Text
-		display block
-		margin 0 auto
-		position relative
-		top 28px
-		width 80%
-	&-All
-		display block
-		margin 0 auto
-		position relative
-		top: -75px;
-		width 30%
+		&-Content
+			width 492px
+			position absolute
+			top 100px
+			left calc(50% - 246px)
+		&-ProductHead
+			color: #46A9BE
+		&-ProductModel
+			color: #D64B4B
+		&-ProductText
+			color: #66C3D7
+	&_Six
+		background-image url('images/Prof/Profilactica_SevenBg.png')
+		background-position bottom center
+		background-size cover
+		background-repeat no-repeat
+		&-Content
+			width 491px
+			position absolute
+			top 300px
+			left 200px
+		&-ProductHead
+			color: #7376A4
+		&-ProductModel
+			color: #D64B4B
+		&-ProductText
+			color: #A1A5D1
+	&_Seven
+		background-image url('images/Prof/Profilactica_EightBg.png')
+		background-position bottom center
+		background-size cover
+		background-repeat no-repeat
+		&-Content
+			width 492px
+			position absolute
+			top 100px
+			left calc(50% - 246px)
+		&-ProductHead
+			color: #D36E96
+		&-ProductModel
+			color: #D64B4B
+		&-ProductText
+			color: #A1A5D1
+	&_Eight
+		&-ProductHead
+			font-family: Rubik;
+			font-weight: 500;
+			font-size: 24px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #4F4F4F;
+			margin-top: 80px;
+		&-ProductModel
+			color #D64B4B
 	&-Header
 		display inline-block
 		width auto
