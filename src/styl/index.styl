@@ -71,9 +71,18 @@
 		position absolute
 		right: -616px;
 		width: 900px;
-		
 .Rec-Dvig
 	animation Rec 0.4s linear 1s forwards
+
+
+@media (max-width: 1366px)
+	.IndexPages
+		&-Logo
+			margin-top 10px
+		&-Image
+			width: 75%;
+	.Rec-Dvig
+		animation Rec1366 0.4s linear 1s forwards
 	
 	
 @keyframes InfoShow
@@ -98,3 +107,8 @@
 		transform translateX(0)
 	to
 		transform translateX(-400px)
+@keyframes Rec1366
+	from
+		transform translateX(0)
+	to
+		transform translateX(-250px)
