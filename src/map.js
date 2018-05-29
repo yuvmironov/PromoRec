@@ -49,10 +49,7 @@ if (thisPage != "") {
 		ymaps.ready(init);
 		var myMap, 
 			myPlacemark;
-
 		function init(){ 
-			
-
 			console.group('Создаем карту');
 				var myMap = new ymaps.Map(
 					'ContactsMap',
@@ -65,94 +62,66 @@ if (thisPage != "") {
 						searchControlProvider: 'yandex#search'
 					}
 				);
-
 			$.getJSON('infomap.json', function (data) {
 					var i = 0;
+					let menuContent = $('#MapAccord')
 					for (var key in data) {
-						createAccLink (data[key], key);
+						createAccLink (data[key], key, menuContent);
 					}
 					document.getElementById('MapAccord').MFSAccordeon({autoClose: true});
-
-
-
-
-				function createAccLink (object, name) {
-					
-					var collection = new ymaps.GeoObjectCollection(null, {});
-					let strAccLink = '<div class="Accord-Element">' +
-					'<a href="#" class="Accord-Link">' +
-					key +
-					'</a>' +
-					createAccContent (object, collection) +
-					'</div>';
-					$(strAccLink).on('click', function ( ev ) {
+				function createAccLink (object, name, menu) {
+					let elementMenu = $('<div class="Accord-Element Contacts-Elemrnt"></div>');
+					let link = $(`<a class="Accord-Link Contacts-Link" href="#">${ key }</a>`);
+					let content = $(`<div class="Accord-Content Contacts-Content"></div>`);
+					$(link).on('click', function ( ev ) {
 						ev.preventDefault();
                             myMap.geoObjects.removeAll();
                             myMap.geoObjects.add(collection);
+                            myMap.setBounds(myMap.geoObjects.getBounds());
+                            myMap.setZoom(myMap.getZoom()-1);
 					});
-					$(strAccLink).appendTo('#MapAccord');
-
-
-				}
-
-
-
-
-
-				function createAccContent (objectContact, colect) {
-					console.log("objectContact", objectContact);
-					
-
-					var accContent = '<div class="Accord-Content">';
-					for (let i = 0; i < objectContact.length; i++) {
-						accContent += `<p class="Contacts-MagazName">Название магазина: ${ objectContact[i].name } </p>`;
-						accContent += `<p class="Contacts-MagazAddress">Адрес магазина: ${ objectContact[i].addres } </p>`;
-						accContent += `<a class="Contacts-MagazLink" href="${ objectContact[i].link }">Перейти в магазин</a>`;
-						var placemark = new ymaps.Placemark(
-					        objectContact[i].coordinates,
-                            {
-                                hintContent: objectContact[i].name,
-                                balloonContentHeader: objectContact[i].name,
-                                balloonContentBody: objectContact[i].address,
-                                balloonContentFooter: ''/*'<div class = "Balloon-Footer">' + createPhone(phoneMass) + createGraff(objectContact[i].graff) + '</div>'*/
-                            },
-                            {
-                                iconLayout: 'default#image',
-                                iconImageHref: objectContact[i].iconImageHref,
-                                iconImageSize: objectContact[i].iconImageSize,
-                                iconImageOffset: objectContact[i].iconImageOffset
-                            }
-                        );
-					    // Добавляем метку в коллекцию.
-                        console.log(objectContact[i].iconImageHref)
-                        console.log("placemark hintContent", placemark.hintContent);
-                        console.log("placemark iconImageHref", placemark.iconImageHref);
-                        console.log("placemark iconImageSize", placemark.iconImageSize);
-                        console.log("placemark iconImageOffset", placemark.iconImageOffset);
-                        colect.add(placemark);
-
-                        
-                        $('.Contacts-Name').on('click', function () {
-                            if (!placemark.balloon.isOpen()) {
-                                placemark.balloon.open();
-                            } else {
-                                placemark.balloon.close();
-                            }
-                        });
+					let collection = new ymaps.GeoObjectCollection(null, {});
+					for (var i = 0; i < object.length; i++) {
+						createAccContent(object[i], collection, content);
 					}
-					accContent += '</div>'; 
-					return accContent;
+					$(link).appendTo(elementMenu);
+					$(content).appendTo(elementMenu)
+					$(elementMenu).appendTo(menu);
+				}
+				function createAccContent (objectContact, colect, cont) {
+					var accContent = $(`<img src="${ objectContact.logo }" alt="${ objectContact.name }"><div class="Contacts-Magaz"><p class="Contacts-MagazName">Название магазина: ${ objectContact.name } </p>` +
+						`<p class="Contacts-MagazAddress">Адрес магазина: ${ objectContact.addres } </p>` + 
+						`<a class="Contacts-MagazLink" href="${ objectContact.link }">Перейти в магазин</a></div>`);
+					var placemark = new ymaps.Placemark(
+				        objectContact.coordinates,
+                        {
+                            hintContent: objectContact.name,
+                            balloonContentHeader: objectContact.name,
+                            balloonContentBody: objectContact.address,
+                            balloonContentFooter: ''
+                        },
+                        {
+                            iconLayout: 'default#image',
+                            iconImageHref: objectContact.iconImageHref,
+                            iconImageSize: objectContact.iconImageSize,
+                            iconImageOffset: objectContact.iconImageOffset
+                        }
+                    );
+                    colect.add(placemark);
+                    $(accContent).on('click', function () {
+                        if (!placemark.balloon.isOpen()) {
+                            placemark.balloon.open();
+                        } else {
+                            placemark.balloon.close();
+                        }
+                    });
+				
+				
+				$(accContent).appendTo(cont);
 
 
 				}
-					/*$(".Tabs-Blocks").mCustomScrollbar({
-						theme: "client",
-						scrollbarPosition: "outside"
-					});*/
-
-
-
-				});
+			});
 		}
 	});
 }
