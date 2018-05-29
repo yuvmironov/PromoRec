@@ -89,9 +89,12 @@ if (thisPage != "") {
 					$(elementMenu).appendTo(menu);
 				}
 				function createAccContent (objectContact, colect, cont) {
-					var accContent = $(`<img src="${ objectContact.logo }" alt="${ objectContact.name }"><div class="Contacts-Magaz"><p class="Contacts-MagazName">Название магазина: ${ objectContact.name } </p>` +
-						`<p class="Contacts-MagazAddress">Адрес магазина: ${ objectContact.addres } </p>` + 
-						`<a class="Contacts-MagazLink" href="${ objectContact.link }">Перейти в магазин</a></div>`);
+					var accContent = $(`<div class="Contacts-MagazWrap">`+
+						`<img class="Contacts-MagazLogo" src="${ objectContact.logo }" alt="${ objectContact.name }">`+
+						`<div class="Contacts-Magaz">` +
+						`<p class="Contacts-MagazName">${ objectContact.name } </p>` +
+						`<p class="Contacts-MagazAddress">${ objectContact.addres } </p>` + 
+						`<a class="Contacts-MagazLink" href="${ objectContact.link }">Перейти в магазин</a></div></div>`);
 					var placemark = new ymaps.Placemark(
 				        objectContact.coordinates,
                         {

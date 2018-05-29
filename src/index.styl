@@ -17,24 +17,50 @@
 	box-sizing border-box
 
 .Accord {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .Accord-Link {
-    text-decoration: none;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: black;
+	text-decoration: none;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: black;
+	position relative
 }
-.Accord-Link:hover {
-    text-decoration: underline;
-}
+
 .Accord-Link_NotActive + .Accord-Content {
-    display: none;
+	display: none;
 }
-.Accord-Link_Active {
-    text-decoration: underline;
-}
+
+.Accord-Link_NotActive
+	&:after
+		content: "";
+		position: absolute;
+		width: 10px;
+		height: 2px;
+		background-color: #d64b4b;
+		top: 20px;
+		left: 18px;
+	&:before
+		content: "";
+		position: absolute;
+		width: 10px;
+		height: 2px;
+		background-color: #d64b4b;
+		top: 20px;
+		left: 18px;
+		transform: rotate(90deg);
+.Accord-Link_Active
+	background-color #f7f7f7
+	&:after
+		content: "";
+		position: absolute;
+		width: 10px;
+		height: 2px;
+		background-color: #d64b4b;
+		top: 20px;
+		left: 18px;
+		
 
 
 .ButtonWhere
@@ -82,3 +108,49 @@
 		color: #D64B4B;
 	&:hover:before
 		display flex
+		
+
+
+.Contacts
+	&-MenuWrapp
+		width 50%
+	&-Link
+		display: flex;
+		width: 100%;
+		padding: 10px 0 10px 40px;
+		font-family: Rubik;
+		font-size: 20px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #4F4F4F;
+		&:hover
+			background-color: #F2F2F2;
+	&-MagazWrap
+		display flex
+		padding 31px 0 31px 26px
+		align-items: center;
+		&:nth-child(even)
+			background-color #FBFBFB
+	&-MagazLogo
+		margin-right 40px
+		cursor pointer
+	&-MagazName
+		font-family: Roboto;
+		font-weight: 500;
+		font-size: 18px;
+		color: #D64B4B;
+		cursor pointer
+		margin-bottom 5px
+	&-MagazAddress
+		font-family: Roboto;
+		font-size: 14px;
+		color: #4F4F4F;
+		margin-bottom 5px
+	&-MagazLink
+		font-family: Roboto;
+		font-size: 14px;
+		text-decoration-line: underline;
+		color: #D64B4B;
+	&-Elemrnt
+		text-align: left;
+		
