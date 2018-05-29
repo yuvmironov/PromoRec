@@ -73,6 +73,7 @@ html.fp-enabled,
 	//background-color: rebeccapurple;
 	width: 30px;
 	height: 50px;
+	animation: ArrowPrev 0.4s ease-in-out infinite alternate
 }
 .fp-controlArrow.fp-prev:before {
 		position: absolute;
@@ -80,8 +81,8 @@ html.fp-enabled,
 		width: 2px;
 		height: 30px;
 		background-color: #AEC0C8
-		transform: rotate(33deg);
-		bottom: 23px;
+		transform: rotate(45deg);
+		bottom: 5px;
 		left: 13px;
 }
 .fp-controlArrow.fp-prev:after {
@@ -90,8 +91,8 @@ html.fp-enabled,
 		width: 2px;
 		height: 30px;
 		background-color: #AEC0C8
-		transform: rotate(-33deg);
-		top: 22px;
+		transform: rotate(-45deg);
+		top: 35px;
 		left: 13px;
 }
 .fp-controlArrow.fp-next {
@@ -100,6 +101,24 @@ html.fp-enabled,
 	height: 50px;
 	//border-width: 38.5px 0 38.5px 34px;
 	//border-color: transparent transparent transparent #fff;
+	animation: ArrowNext 0.4s ease-in-out infinite alternate
+}
+
+@keyframes ArrowNext {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform translateX(10px);
+	}
+}
+@keyframes ArrowPrev {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform translateX(-10px);
+	}
 }
 .fp-controlArrow.fp-next:before {
 		position: absolute;
@@ -107,8 +126,8 @@ html.fp-enabled,
 		width: 2px;
 		height: 30px;
 		background-color: #AEC0C8
-		transform: rotate(-33deg);
-		bottom: 23px;
+		transform: rotate(-45deg);
+		bottom: 5px;
 		left: 13px;
 }
 .fp-controlArrow.fp-next:after {
@@ -117,8 +136,8 @@ html.fp-enabled,
 		width: 2px;
 		height: 30px;
 		background-color: #AEC0C8
-		transform: rotate(33deg);
-		top: 22px;
+		transform: rotate(45deg);
+		top: 35px;
 		left: 13px;
 }
 .fp-scrollable {
@@ -176,7 +195,7 @@ html.fp-enabled,
 	margin: 0;
 	padding: 0;
 	margin: 0 auto;
-	background-image: url(images/Princip/PrincipDotsLine.svg);
+	background-image: url(../images/Princip/PrincipDotsLine.svg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	width: 302px;

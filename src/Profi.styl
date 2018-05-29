@@ -1,18 +1,18 @@
 .Profilactica
 	 &_One
-		background-image  url('images/Prof/Profilactica_All.png'), url('images/Prof/Profilactica_Text.svg'), url('images/Prof/ProfBg.png')
+		background-image  url('../images/Prof/Profilactica_All.png'), url('../images/Prof/Profilactica_Text.svg'), url('../images/Prof/ProfBg.png')
 		background-position center 130px,center 90px,center bottom
 		background-size 35%, 40%,  cover
 		background-repeat no-repeat, no-repeat, no-repeat
 		&-Header
 			margin-top 700px
 	&_Two
-		background-image url('images/Princip/PrincipBg.png')
+		background-image url('../images/Princip/PrincipBg.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
 	&_Three
-		background-image url('images/Prof/Bg2.png'), url('images/Prof/Bg1.png')
+		background-image url('../images/Prof/Bg2.png'), url('../images/Prof/Bg1.png')
 		background-position bottom center, bottom center
 		background-size cover, cover
 		background-repeat no-repeat, no-repeat
@@ -28,10 +28,10 @@
 		&-ProductText
 			color: #828282
 	&_Four
-		background-image url('images/Prof/Profilactica_FourBg.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
+		background-image url('../images/Prof/Profilactica_FourBg2.png'), url('../images/Prof/Profilactica_FourBg1.png')
+		background-position bottom center, bottom center
+		background-size cover, cover
+		background-repeat no-repeat, no-repeat
 		&-Content
 			width 491px
 			position absolute
@@ -39,20 +39,22 @@
 			left 200px
 		&-ProductHead
 			color: #8B7063;
+			&:after
+				background-color #D9C6B6
 		&-ProductModel
 			color: #D64B4B
 		&-ProductText
 			color: #998074
 	&_Five
-		background-image url('images/Prof/Profilactica_FiveBg.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
+		background-image url('../images/Prof/Profilactica_FiveBg2.png'), url('../images/Prof/Profilactica_FiveBg1.png')
+		background-position bottom center, bottom center
+		background-size cover, cover
+		background-repeat no-repeat, no-repeat
 		&-Content
 			width 491px
 			position absolute
-			top 300px
-			left 200px
+			top: 350px;
+			left: 250px;
 		&-ProductHead
 			color: #579F9B
 		&-ProductModel
@@ -60,15 +62,15 @@
 		&-ProductText
 			color: #7DB3B0
 	&_Six
-		background-image url('images/Prof/Profilactica_SixBg.png')
+		background-image url('../images/Prof/Profilactica_SixBg.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
 		&-Content
-			width 492px
-			position absolute
-			top: 100px;
-			left: calc(50% - 246px);
+			width: 542px;
+			position: absolute;
+			top: 130px;
+			left: calc(50% - 271px);
 		&-ProductHead
 			color: #46A9BE
 		&-ProductModel
@@ -76,10 +78,10 @@
 		&-ProductText
 			color: #66C3D7
 	&_Seven
-		background-image url('images/Prof/Profilactica_SevenBg.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
+		background-image url('../images/Prof/Profilactica_SevenBg2.png'), url('../images/Prof/Profilactica_SevenBg1.png')
+		background-position bottom center, bottom center
+		background-size cover, cover
+		background-repeat no-repeat, no-repeat
 		&-Content
 			width 492px
 			position absolute
@@ -92,21 +94,21 @@
 		&-ProductText
 			color: #A1A5D1
 	&_Eight
-		background-image url('images/Prof/Profilactica_EightBg.png')
+		background-image url('../images/Prof/Profilactica_EightBg.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
 		&-Content
-			width 491px
-			position absolute
-			top: 100px;
-			left: calc(50% - 246px);
+			width: 552px;
+			position: absolute;
+			top: 130px;
+			left: calc(50% - 276px);
 		&-ProductHead
 			color: #D36E96;
 		&-ProductModel
 			color: #D64B4B
 		&-ProductText
-			color: #A1A5D1
+			color: #E6A4BE
 	&_Nine
 		&-ProductHead
 			font-family: Rubik;
@@ -123,7 +125,7 @@
 		width auto
 		border-style: solid;
 		border-width: 6px;
-		border-image: url('images/Prof/ProfBorder.png') 6 fill repeat;
+		border-image: url('../images/Prof/ProfBorder.png') 6 fill repeat;
 		padding 26px 42px
 		position: relative;
 		top: -100px;
@@ -147,3 +149,62 @@
 		&:not(:last-child)
 			margin-bottom 25px
 			
+@media (max-width: 1680px)
+	.Profilactica
+		&_Three, &_Four
+			background-position -180px center,bottom center
+		&_Five
+			background-position: -170px center,bottom center
+		&_Seven
+			background-position: -110px center,bottom center;
+@media (max-width: 1440px)
+	.Profilactica
+		&_Three, &_Four
+			background-position: 220px center,bottom center;
+			background-size: 97%, cover;
+			&-Content
+				top 200px
+		&_Five
+			background-position: -70px center,bottom center;
+		&_Seven
+			background-position: 190px center,bottom center;
+			background-size: 100%, cover;
+@media (max-width: 1280px)
+	.Profilactica
+		&_One
+			background-size: 55%,80%,cover;
+		&_Three, &_Four
+			background-position: center 220px,bottom center;
+			background-size: 130%,cover;
+			&-Content
+				top 150px
+		&_Five
+			background-position: -270px center,bottom center;
+			&-Content
+				left 100px
+		&_Seven
+			background-position: 230px center,bottom center
+@media (max-width: 1024px)
+	.Profilactica
+		&_One
+			background-size: 40%, 80%, cover;
+			&-Header
+				width: 85%;
+				margin-top: 500px;
+		&_Three, &_Four
+			background-position: 100px center,bottom center;
+			background-size: 120%,cover;
+			&-Content
+				left: 60px;
+		&_Five
+			background-position: -80px center,bottom center;
+			&-Content
+				top: 290px;
+		&_Seven
+			&-Content
+				top: 220px;
+				left: 80px;
+		&-HeaderText
+			font-size 24px
+		&-Desc
+			width 80%

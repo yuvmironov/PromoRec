@@ -32,7 +32,9 @@ gulp.task('preload', function () {
 
 gulp.task('pug', function () {
 	return gulp.src('src/*.pug')
-		.pipe(lp.pug({}))
+		.pipe(lp.pug({
+			pretty: true
+		}))
 		.pipe(gulp.dest('relise'))
 });
 

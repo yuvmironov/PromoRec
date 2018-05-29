@@ -143,10 +143,10 @@ $('#ProfFullPage').fullpage({
 							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_1.svg")' })
 							break;
 						case 1:
-							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_2.svg")' })
+							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_3.svg")' })
 							break;
 						case 2:
-							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_3.svg")' })
+							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_2.svg")' })
 							break;
 					}
 				}
@@ -953,10 +953,10 @@ $('#UniFullPage').fullpage({
 							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_1.svg")' })
 							break;
 						case 1:
-							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_2.svg")' })
+							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_3.svg")' })
 							break;
 						case 2:
-							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_3.svg")' })
+							$(sliderDots[i]).css({ 'background-image' : 'url("images/Princip/SliderDot_2.svg")' })
 							break;
 					}
 				}

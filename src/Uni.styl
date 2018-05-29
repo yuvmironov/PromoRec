@@ -2,22 +2,22 @@
 	width 100vw
 	height 100vh
 	&_One
-		background-image  url('images/Uni/UniAll.png'), url('images/Uni/UniText.svg'), url('images/Uni/UniBg.png')
-		background-position center 130px,center 90px,center bottom
-		background-size 25%, 40%,  cover
-		background-repeat no-repeat, no-repeat, no-repeat
+		background-image: url(../images/Uni/UniAll.png),url(../images/Uni/UniText.svg),url(../images/Uni/UniBg.png);
+		background-position: center 120px,center 110px,center bottom;
+		background-size: 21%,80%,cover;
+		background-repeat: no-repeat,no-repeat,no-repeat;
 		&-Header
-			margin-top 700px
+			margin-top 380px
 	&_Two
-		background-image url('images/Princip.png')
+		background-image url('../images/Princip.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
 	&_Three
-		background-image url('images/Uni/UniThree.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
+		background-image url('../images/Uni/UniThree2.png'), url('../images/Uni/UniThree1.png')
+		background-position bottom center, bottom center
+		background-size cover, cover
+		background-repeat no-repeat, no-repeat
 		&-Content
 			width 491px
 			position absolute
@@ -30,15 +30,15 @@
 		&-ProductText
 			color: #8FABC1
 	&_Four
-		background-image url('images/Uni/UniFor.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
+		background-image url('../images/Uni/UniFor2.png'), url('../images/Uni/UniFor1.png')
+		background-position bottom center, bottom center
+		background-size cover, cover
+		background-repeat no-repeat, no-repeat
 		&-Content
-			width 491px
-			position absolute
-			top 300px
-			left 200px
+			width: 571px;
+			position: absolute;
+			top: 200px;
+			left: 300px;
 		&-ProductHead
 			color: #91717C
 		&-ProductModel
@@ -46,15 +46,15 @@
 		&-ProductText
 			color: #AC8A96
 	&_Five
-		background-image url('images/Prof/Profilactica_SixBg.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
+		background-image url('../images/Uni/UniFive2.png'), url('../images/Uni/UniFive1.png')
+		background-position bottom center, bottom center
+		background-size cover, cover
+		background-repeat no-repeat, no-repeat
 		&-Content
-			width 492px
-			position absolute
-			top 100px
-			left calc(50% - 246px)
+			width: 542px;
+			position: absolute;
+			top: 130px;
+			left: calc(50% - 271px);
 		&-ProductHead
 			color: #46A9BE
 		&-ProductModel
@@ -62,12 +62,12 @@
 		&-ProductText
 			color: #66C3D7
 	&_Six
-		background-image url('images/Prof/Profilactica_SevenBg.png')
-		background-position bottom center
-		background-size cover
-		background-repeat no-repeat
+		background-image url('../images/Prof/Profilactica_SevenBg2.png'), url('../images/Prof/Profilactica_SevenBg1.png')
+		background-position bottom center, bottom center
+		background-size cover, cover
+		background-repeat no-repeat, no-repeat
 		&-Content
-			width 491px
+			width 492px
 			position absolute
 			top 300px
 			left 200px
@@ -78,15 +78,15 @@
 		&-ProductText
 			color: #A1A5D1
 	&_Seven
-		background-image url('images/Prof/Profilactica_EightBg.png')
+		background-image url('../images/Prof/Profilactica_EightBg.png')
 		background-position bottom center
 		background-size cover
 		background-repeat no-repeat
 		&-Content
-			width 492px
-			position absolute
-			top 100px
-			left calc(50% - 246px)
+			width: 552px;
+			position: absolute;
+			top: 130px;
+			left: calc(50% - 276px);
 		&-ProductHead
 			color: #D36E96
 		&-ProductModel
@@ -109,10 +109,9 @@
 		width auto
 		border-style: solid;
 		border-width: 6px;
-		border-image: url('images/Uni/UniBorder.png') 6 fill repeat;
+		border-image: url('../images/Uni/UniBorder.png') 6 fill repeat;
 		padding 26px 40px
 		position: relative;
-		top: -100px;
 	&-HeaderText
 		font-family: Rubik;
 		font-weight: 500;
@@ -120,8 +119,10 @@
 		letter-spacing: 0.1em;
 		color: #8CB2D5;
 	&-Description
-		position relative
-		top -80px
+		width: 54%;
+		position: relative;
+		top: 20px;
+		margin: 0 auto;
 	&-Desc
 		font-family: Roboto;
 		line-height: 21px;
@@ -139,3 +140,82 @@
 		&_Active
 			border-bottom-color #C5AA9F
 			color #C5AA9F
+			
+
+@media (max-width: 1680px)
+	.Univarsalnie
+		&_Three
+			background-position: 0px center,bottom center;
+		&_Four
+			background-position: 0px center,bottom center;
+		&_Six
+			background-position: -60px center,bottom center;
+@media (max-width: 1440px)
+	.Univarsalnie
+		&_One
+			background-size: 31%,80%,cover;
+			&-Header 
+				margin-top: 480px;
+		&_Three
+			background-position: -100px center,bottom center;
+			background-size: 150%,cover;
+			&-Content
+				top: 370px;
+				left: 160px;
+		&_Four
+			background-size: cover, cover;
+			background-position: -300px center, bottom center;
+			&-Content
+				top: 200px;
+				left: 100px;
+		&_Six
+			background-position: -180px center,bottom center;
+			&-Content
+				left: 100px;
+@media (max-width: 1280px)
+	.Univarsalnie
+		&_One
+			background-size: 35%,80%,cover;
+		&_Three
+			background-position: -20px 70px,bottom center;
+			background-size: 150%,cover;
+			&-Content
+				top: 360px;
+@media (max-width: 1024px)
+	.Univarsalnie
+		&_One
+			background-size: 35%,80%,cover;
+			&-Header
+				width: 85%;
+				margin-top: 500px;
+		&_Three
+			background-position: 100px center,bottom center;
+			background-size: 120%,cover;
+			&-Content
+				left: 60px;
+				top: 250px;
+		&_Four
+			background-size: 130%,cover;
+			background-position: -30px center,bottom center;
+			&-Content
+				top: 130px;
+				left: 20px;
+		&_Five
+			background-position: -230px 60px,bottom center;
+		&_Six
+			background-size: 120%, cover;
+			background-position: 90px center, center center;
+			&-Content
+				top: 200px;
+				left: 30px;
+		&_Seven
+			&-Content
+				top: 90px;
+
+
+		&-HeaderText
+			font-size 20px
+		&-Description
+			width: 84%;
+		&-Desc
+			font-size: 14px;
