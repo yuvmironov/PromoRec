@@ -15,7 +15,28 @@
 	margin 0
 	padding 0
 	box-sizing border-box
-	
+
+.Accord {
+    display: flex;
+    flex-direction: column;
+}
+.Accord-Link {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+.Accord-Link:hover {
+    text-decoration: underline;
+}
+.Accord-Link_NotActive + .Accord-Content {
+    display: none;
+}
+.Accord-Link_Active {
+    text-decoration: underline;
+}
+
+
 .ButtonWhere
 	position: fixed;
 	bottom: 50px;
